@@ -1,17 +1,14 @@
 const min = function (a, b) {
-    return (a <= b) ? a : b; 
-  }
-  
-console.log(min(3, -1));
-
-// Cпособ с if
-  
-const min2 = function (a, b) {
-    if (a <= b) {
+    if (a < b) {
       return a;
-    } else {
+    }
+    if (a > b) {
       return b;
-    } 
+    }
+    
+    return 'Numbers are equal'
+    
   }
   
 console.log(min(1, -2));
+console.log(min(1, 1));

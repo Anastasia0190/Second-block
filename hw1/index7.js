@@ -1,5 +1,5 @@
 const checkLetterCase = function (a) {
-    return (a === a.toUpperCase()) ? 'Оууу май, большая буква!' : 'Нет уж, маленькие буквы - скучно';
+    return a === a.toUpperCase() ? 'Оууу май, большая буква!' : 'Нет уж, маленькие буквы - скучно';
     
 }
 
