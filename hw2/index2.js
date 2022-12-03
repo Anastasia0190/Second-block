@@ -5,19 +5,21 @@ const changeCase = (letters) => {
     return;
   }
 
-  const result = letters.map((letter) => {
-    const isLetterCapital = letter === letter.toUpperCase();
-    return isLetterCapital ? letter.toLowerCase() : letter.toUpperCase();
+  return letters.map((letter) => {
+    if (letter === letter.toUpperCase()) {
+        return letter.toLowerCase();
+    }  
+    
+    return letter.toUpperCase();
   });
-
-  return result;
+ 
 };
 
 console.log(changeCase(lettersList));
 
 
 
-let newLettersList = [];
+const newLettersList = [];
 
 for (let i = 0; i < lettersList.length; i++) {
   const letter = lettersList[i];

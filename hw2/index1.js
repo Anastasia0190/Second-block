@@ -1,35 +1,36 @@
 const userList = ["Alex", "alex", "Max", "Vika", "Petr", "Alexandra"];
-const BLACKLISTED_LETTERS = ["a", "p"];
+const blacklistedLetters = ["a", "p"];
 
-const filterUsers = (users, BLACKLISTED_LETTERS) => {
-  if (!Array.isArray(users, BLACKLISTED_LETTERS)) {
+const filterUsers = (users, blacklistedLetters) => {
+  if (!Array.isArray(users) || !Array.isArray(blacklistedLetters)) {
     return;
   }
 
   const result = users.filter((user) => {
     const lowercasedUsernameFirstLetter = user[0].toLowerCase();
-    return !BLACKLISTED_LETTERS.includes(lowercasedUsernameFirstLetter);
+    return !blacklistedLetters.includes(lowercasedUsernameFirstLetter);
   });
 
   return result;
 };
 
-console.log(filterUsers(userList, BLACKLISTED_LETTERS));
+console.log(filterUsers(userList, blacklistedLetters));
 
 
+ 
+const newUserList = [];
 
-let newUserList = [];
 
 for (let i = 0; i < userList.length; i++) {
   const user = userList[i];
   const lowercasedUsernameFirstLetter = user[0].toLowerCase();
 
-  if (!BLACKLISTED_LETTERS.includes(lowercasedUsernameFirstLetter)) {
+  if (!blacklistedLetters.includes(lowercasedUsernameFirstLetter)) {
     newUserList.push(user);
   }
-}
+    }
 
-console.log(newUserList);
+console.log((newUserList));
 
 
 let i = 0;
@@ -38,7 +39,7 @@ while (i < userList.length) {
   const user = userList[i];
   const lowercasedUsernameFirstLetter = user[0].toLowerCase();
 
-  if (!BLACKLISTED_LETTERS.includes(lowercasedUsernameFirstLetter)) {
+  if (!blacklistedLetters.includes(lowercasedUsernameFirstLetter)) {
     newUserList.push(user);
   }
 
@@ -51,7 +52,7 @@ console.log(newUserList);
 for (const user of userList) {
   const lowercasedUsernameFirstLetter = user[0].toLowerCase();
 
-  if (!BLACKLISTED_LETTERS.includes(lowercasedUsernameFirstLetter)) {
+  if (!blacklistedLetters.includes(lowercasedUsernameFirstLetter)) {
     newUserList.push(user);
   }
 }
