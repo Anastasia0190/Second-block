@@ -1,4 +1,4 @@
-const wordsList = ['hello', 'wOrLd'];
+const wordsList = ["hello", "wOrLd"];
 
 const changeCase = (words) => {
   if (!Array.isArray(words)) {
@@ -6,10 +6,8 @@ const changeCase = (words) => {
   }
 
   return words.map((word) => {
-   return word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase()
-    
+    return word[0].toUpperCase() + word.slice(1).toLowerCase();
   });
- 
 };
 
 console.log(changeCase(wordsList));

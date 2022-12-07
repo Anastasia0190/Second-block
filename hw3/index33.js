@@ -1,27 +1,20 @@
 const users = [
-
-    {
-        id: 1,
-        name: 'Alex',
-    },
-    {
-        id: 2,
-        name: 'Tamara',
-    },
-    {
-        id: 3,
-        name: 'Max',
-    },
+  {
+    id: 1,
+    name: "Alex",
+  },
+  {
+    id: 2,
+    name: "Tamara",
+  },
+  {
+    id: 3,
+    name: "Max",
+  },
 ];
 
 const removeUsers = (users, ids) => {
-
-    const result = users.filter((user) => {
-        
-        return !ids.includes(user.id);
-    });
-    
-    return result;
+  return users.filter((user) => !ids.includes(user.id));
 };
 
 console.log(removeUsers(users, [2, 3]));
