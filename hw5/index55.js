@@ -1,6 +1,6 @@
 const calculateFactorial1 = (number) => {
   if (number === 0) {
-    return;
+    return 1;
   }
 
   return number != 1 ? number * calculateFactorial1(number - 1) : 1;

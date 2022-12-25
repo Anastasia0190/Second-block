@@ -1,3 +1,19 @@
+const findMissingNumber = (numbers) => {
+  for (let i = 0; i < numbers.length; i++) {
+    const currentNumber = numbers[i];
+    const nextNumber = numbers[i + 1];
+    const numberAfterNextNumber = numbers[i + 2];
+
+    const currentDifference = nextNumber - currentNumber;
+    const nextDifference = numberAfterNextNumber - nextNumber;
+
+    if (currentDifference !== nextDifference) {
+      return currentNumber + nextDifference;
+    }
+  }
+};
+console.log(findMissingNumber([1, 3, 5, 9, 11]));
+
 const findMissing = (arr = []) => {
   if (arr.length <= 2) {
     return;
